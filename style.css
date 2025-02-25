@@ -1,0 +1,199 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; /* Dark Navy Blue */
+}
+
+/* Hero Section Text Styling */
+p.hero-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px; /* Adjust for body text */
+    font-weight: 400; /* Normal weight */
+    line-height: 1.4; /* Adjust for readability */
+}
+
+h1.hero-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px; /* Adjust this for the right size */
+    font-weight: 700; /* Bold */
+    text-transform: uppercase; /* Capitalizes text */
+    letter-spacing: 1px; /* Adjust for spacing */
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('imgs/gerald.webp') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    justify-content: flex-end; /* Push content to the right */
+    align-items: center;
+    padding-right: 10%; /* Adjust distance from right edge */
+    animation: zoomOut 2s ease-out;
+    color: #f8f9fa;
+}
+
+/* Zoom-out Animation */
+@keyframes zoomOut {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.hero-content {
+    color: white;
+    text-align: left;
+    max-width: 40%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card Container - Holds all the cards */
+.card-container {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card-link {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-link:nth-child(2) .card,
+    .card-link:nth-child(4) .card {
+        margin-top: 0;
+    }
+
+    .hero-content {
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero {
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+/* Moves the second and fourth cards lower */
+.card-link:nth-child(2) .card,
+.card-link:nth-child(4) .card {
+    margin-top: 50px;
+}
+
+/* Card Link Styling */
+.card-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps text colors unchanged */
+    display: inline-block; /* Ensures the entire card is clickable */
+}
+
+/* Card Hover Effect */
+.card-link:hover .card {
+    transform: scale(1.05); /* Slight hover effect */
+    transition: 0.3s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    width: 360px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes elements evenly */
+}
+
+/* Card Hover Effect - Enlarges on hover */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Header Styling */
+.card .card-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    z-index: 2; /* Ensures the header is above other elements */
+}
+
+/* Card Body Styling */
+.card .card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Card Image Styling */
+.card .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Hero Section - Background Fading Effect */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Length of the fade effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #001f3f 100%);
+    pointer-events: none; /* Ensures it doesn't interfere with interactions */
+}
+
+/* Color Themes for Various Sections */
+.bg-light-blue { background-color: #D0D7E2; } /* Light blue-gray */
+.bg-white { background-color: #FFFFFF; }
+.bg-blue { background-color: #A8C7FF; } /* Light blue */
+.bg-tan { background-color: #F5DEB3; } 
+

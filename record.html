@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerald Ford - His Record</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="record.css">
+    
+    <style>
+        .navbar {
+            border: 2px solid white;
+            background-color: rgba(0, 31, 63, 0.9);
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero-h1, .hero-p {
+            color: white;
+        }
+
+        #quoteDisplay {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gerald Ford</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="record.html">His Record</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moments.html">His Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="legacy.html">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<<<<<<< HEAD
+    <!-- Hero Section -->
+=======
+>>>>>>> 15cee1b (Did so much no sleep coded all day this a big change from last commit)
+    <div class="hero" style="background-image: url('imgs/gerald-ford-teen.gif');">
+        <div class="hero-content">
+            <h1 class="hero-h1">His Record</h1>
+            <p class="hero-p">A presidency defined by integrity, resilience, and critical decision-making.</p>
+            <div id="quoteDisplay"></div>
+            <button onclick="displayRandomQuote()" class="btn btn-light mt-3">Show Another Quote</button>
+        </div>
+    </div>
+
+<<<<<<< HEAD
+
+    <script>
+
+=======
+    <div class="boxes-container">
+        <div class="box" onclick="expandBox(this)">
+            <h3>Early Life</h3>
+            <p>Born in Omaha, Nebraska, Ford's early years shaped his character.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+        <div class="box" onclick="expandBox(this)">
+            <h3>Military Service</h3>
+            <p>Served in the U.S. Navy during World War II.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+        <div class="box" onclick="expandBox(this)">
+            <h3>Congressional Career</h3>
+            <p>Represented Michigan's 5th district for 25 years.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+        <div class="box" onclick="expandBox(this)">
+            <h3>Vice Presidency</h3>
+            <p>Appointed after Spiro Agnew's resignation in 1973.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+        <div class="box" onclick="expandBox(this)">
+            <h3>Presidency</h3>
+            <p>Assumed office following Nixon's resignation in 1974.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+        <div class="box" onclick="expandBox(this)">
+            <h3>Legacy</h3>
+            <p>Known for healing the nation after Watergate.</p>
+            <button class="close-btn" onclick="closeBox(event, this)">×</button>
+        </div>
+    </div>
+
+    <script>
+>>>>>>> 15cee1b (Did so much no sleep coded all day this a big change from last commit)
+        const quotes = [
+            'I am a Ford, not a Lincoln.',
+            'I promise my fellow citizens only this: To uphold the Constitution, to do what is right as God gives me to see the right, and…to do the very best that I can for America.',
+            'A government big enough to give you everything you want is a government big enough to take from you everything you have.',
+            'To me, the Presidency and the Vice-Presidency were not prizes to be won, but a duty to be done.',
+            'We are bound together by the most powerful of all ties, our fervent love for freedom and independence, which knows no homeland but the human heart.'
+<<<<<<< HEAD
+        ]
+
+    </script>
+
+=======
+        ];
+
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('quoteDisplay');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        function expandBox(box) {
+            if (!box.classList.contains('expanded')) {
+                box.classList.add('expanded');
+            }
+        }
+
+        function closeBox(event, btn) {
+            event.stopPropagation();
+            btn.parentElement.classList.remove('expanded');
+        }
+
+        // Display initial quote when page loads
+        window.onload = function() {
+            displayRandomQuote();
+        };
+    </script>
+</old_str>
+        const quotes = [
+            'I am a Ford, not a Lincoln.',
+            'I promise my fellow citizens only this: To uphold the Constitution, to do what is right as God gives me to see the right, and…to do the very best that I can for America.',
+            'A government big enough to give you everything you want is a government big enough to take from you everything you have.',
+            'To me, the Presidency and the Vice-Presidency were not prizes to be won, but a duty to be done.',
+            'We are bound together by the most powerful of all ties, our fervent love for freedom and independence, which knows no homeland but the human heart.'
+        ];
+
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('quoteDisplay');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        // Display initial quote
+        displayRandomQuote();
+    </script>
+>>>>>>> 15cee1b (Did so much no sleep coded all day this a big change from last commit)
+</body>
+</html>
