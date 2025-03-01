@@ -43,10 +43,10 @@ let score = 0;
 
 function displayQuestion() {
     if (!document.getElementById('question')) return;
-    
+
     const questionData = questions[currentQuestion];
     document.getElementById('question').textContent = questionData.question;
-    const optionsHtml = questionData.options.map(option => 
+    const optionsHtml = questionData.options.map(option =>
         `<div class="form-check">
             <input class="form-check-input" type="radio" name="quiz" value="${option}" id="${option}">
             <label class="form-check-label" for="${option}">${option}</label>
@@ -108,7 +108,7 @@ const quotes = [
 function displayRandomQuote() {
     const quoteElement = document.getElementById('quoteDisplay');
     if (!quoteElement) return;
-    
+
     const randomIndex = Math.floor(Math.random() * quotes.length);
     quoteElement.textContent = `"${quotes[randomIndex]}"`;
 }
@@ -125,7 +125,7 @@ function closeBox(event, btn) {
 }
 
 // Initialize functions when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('quoteDisplay')) {
         displayRandomQuote();
     }

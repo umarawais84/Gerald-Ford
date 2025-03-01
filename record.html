@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerald Ford - His Record</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="record.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -37,69 +39,41 @@
     <div class="boxes-container">
         <div class="box" onclick="expandBox(this)">
             <h3>Early Life</h3>
-            <p>Born in Omaha, Nebraska on July 14, 1913, Ford's early years were marked by determination and hard work. He excelled in both academics and athletics at the University of Michigan.</p>
+            <p>Born in Omaha, Nebraska on July 14, 1913, Ford's early years were marked by determination and hard work.
+                He excelled in both academics and athletics at the University of Michigan.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
         <div class="box" onclick="expandBox(this)">
             <h3>Military Service</h3>
-            <p>Served with distinction in the U.S. Navy during World War II aboard the USS Monterey. Rose to the rank of Lieutenant Commander and earned several commendations.</p>
+            <p>Served with distinction in the U.S. Navy during World War II aboard the USS Monterey. Rose to the rank of
+                Lieutenant Commander and earned several commendations.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
         <div class="box" onclick="expandBox(this)">
             <h3>Congressional Career</h3>
-            <p>Represented Michigan's 5th district for 25 years (1949-1973). Served as House Minority Leader and earned respect from both parties for his integrity.</p>
+            <p>Represented Michigan's 5th district for 25 years (1949-1973). Served as House Minority Leader and earned
+                respect from both parties for his integrity.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
         <div class="box" onclick="expandBox(this)">
             <h3>Vice Presidency</h3>
-            <p>Appointed Vice President in 1973 under the 25th Amendment after Spiro Agnew's resignation. Served with dignity during a turbulent time in American politics.</p>
+            <p>Appointed Vice President in 1973 under the 25th Amendment after Spiro Agnew's resignation. Served with
+                dignity during a turbulent time in American politics.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
         <div class="box" onclick="expandBox(this)">
             <h3>Presidency</h3>
-            <p>Became the 38th President in 1974. Key achievements include the Helsinki Accords, tackling inflation, and healing the nation after Watergate.</p>
+            <p>Became the 38th President in 1974. Key achievements include the Helsinki Accords, tackling inflation, and
+                healing the nation after Watergate.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
         <div class="box" onclick="expandBox(this)">
             <h3>Legacy</h3>
-            <p>Remembered for his integrity, bipartisanship, and crucial role in helping the nation recover from the Watergate crisis. Awarded the Presidential Medal of Freedom in 1999.</p>
+            <p>Remembered for his integrity, bipartisanship, and crucial role in helping the nation recover from the
+                Watergate crisis. Awarded the Presidential Medal of Freedom in 1999.</p>
             <button class="close-btn" onclick="closeBox(event, this)">×</button>
         </div>
     </div>
-
-    <script>
-        const quotes = [
-            'I am a Ford, not a Lincoln.',
-            'Truth is the glue that holds government together.',
-            'Our constitution works. Our great republic is a government of laws, not of men.',
-            'History and experience tells us that moral progress comes not in comfortable and complacent times, but out of trial and confusion.',
-            'The political lesson of Watergate is this: Never again must America allow an arrogant, elite guard of political adolescents to bypass the regular party organization and dictate the terms of a national election.'
-        ];
-
-        function displayRandomQuote() {
-            const quoteElement = document.getElementById('quoteDisplay');
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            quoteElement.textContent = `"${quotes[randomIndex]}"`;
-        }
-
-        function expandBox(box) {
-            if (!box.classList.contains('expanded')) {
-                box.classList.add('expanded');
-            }
-        }
-
-        function closeBox(event, btn) {
-            event.stopPropagation();
-            btn.parentElement.classList.remove('expanded');
-        }
-
-        // Display initial quote when page loads
-        window.onload = displayRandomQuote;
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
@@ -115,9 +89,9 @@
                 <div class="col-md-6 mb-3">
                     <h5>Historical Resources</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Presidential Archives</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Historical Documents</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Photo Gallery</a></li>
+                        <li><a href="https://www.fordlibrarymuseum.gov/#event-number-901" target="blank_" class="text-white text-decoration-none">Presidential Archives</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Gerald_Ford" target=""blank_ class="text-white text-decoration-none">Gerald Ford Wiki</a></li>
+                        <li><a href="https://www.fordlibrarymuseum.gov/digital-research-room/library-collections/ford-library-audiovisual-collections/select-photographs" target="_blank" class="text-white text-decoration-none">Photo Gallery</a></li>
                     </ul>
                 </div>
             </div>
@@ -127,3 +101,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
