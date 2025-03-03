@@ -81,9 +81,17 @@ function checkAnswer() {
             displayQuestion();
         } else {
             document.getElementById('questionContainer').innerHTML = `
-                <h3>Quiz Complete!</h3>
-                <p>Final Score: ${score} out of ${questions.length}</p>
-                <button onclick="resetQuiz()" class="btn btn-primary">Try Again</button>
+                <div class="text-center p-4">
+                    <h3 class="mb-4">Quiz Complete!</h3>
+                    <div class="final-score mb-4 p-3 bg-light rounded">
+                        <h2>${score} out of ${questions.length}</h2>
+                        <p>${(score/questions.length*100).toFixed(0)}% Correct</p>
+                    </div>
+                    <p class="mb-4">${score === questions.length ? 'Perfect! You really know your Gerald Ford history!' : 
+                       score >= questions.length/2 ? 'Good job! You know quite a bit about Gerald Ford.' : 
+                       'Keep learning more about Gerald Ford\'s fascinating history!'}</p>
+                    <button onclick="resetQuiz()" class="btn btn-primary btn-lg">Try Again</button>
+                </div>
             `;
         }
     }, 2000);

@@ -25,13 +25,17 @@ h1.hero-h1 {
     background: url('imgs/gerald.webp') no-repeat center center/cover;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 700px; /* Further increased height */
     display: flex;
     justify-content: flex-end;
+    /* Push content to the right */
     align-items: center;
     padding-right: 10%;
+    /* Adjust distance from right edge */
     animation: zoomOut 2s ease-out;
     color: #f8f9fa;
+    background-size: cover; /* Ensure image covers the container */
+    background-position: center; /* Center the background image */
 }
 
 /* Zoom-out Animation */
@@ -128,9 +132,59 @@ h1.hero-h1 {
     padding: 20px;
 }
 
+.quiz-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+}
+
+.quiz-score {
+    background-color: #001f3f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#questionContainer {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
 .feedback {
     display: none;
     margin-top: 10px;
+    font-weight: 500;
+}
+
+#options .form-check {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#options .form-check:hover {
+    background-color: #f8f9fa;
+}
+
+#options .form-check-input {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #001f3f;
+    border-color: #001f3f;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+    border-color: #003366;
+    transform: translateY(-2px);
 }
 
 /* Record Page Styles */
@@ -240,7 +294,7 @@ h1.hero-h1 {
     .hero {
         justify-content: center;
         padding-right: 0;
-        height: 400px;
+        height: 500px; /* Increased responsive height */
     }
 
     .hero-h1 {
